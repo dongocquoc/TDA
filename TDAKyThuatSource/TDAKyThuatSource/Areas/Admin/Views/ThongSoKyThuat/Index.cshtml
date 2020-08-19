@@ -1,0 +1,339 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_layout_master.cshtml";
+}
+
+<!-- content-wrapper ends -->
+<div class="main-panel">
+    <div class="card">
+        <div class="card-header text-dark">
+            Thông Số Kỹ Thuật
+            <div class="ml-auto d-inline float-right">
+                <button type="button" class="btn btn-primary btn-sm ml-auto" data-toggle="modal"
+                        data-target="#addThietBi">
+                    Tạo mới
+                </button>
+            </div>
+
+            <!-- add -->
+            <div bsmodal #modaladd="bs-modal" class="modal fade" id="addThietBi" tabindex="-1" role="dialog"
+                 aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Tạo Mới</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="form-row">
+                                <div class="form-group col-md-4">
+                                    <label for="chooseCumThietBi">Cụm Thiết Bị</label>
+                                    <select name="chooseCumThietBi" id="chooseCumThietBi" class="form-control">
+                                        <option>Cụm abc</option>
+                                    </select>
+                                </div>
+                                <div class="form-group col-md-4">
+                                    <label for="ThongSoKT">Thông Số Kỹ Thuật</label>
+                                    <input type="text" name="ThongSoKT" class="form-control mb-2">
+                                </div>
+                                <div class="form-group col-md-4">
+                                    <label for="Dvt">Đơn Vị Tính</label>
+                                    <input type="text" class="form-control mb-2" name="Dvt">
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-md-4">
+                                    <label for="SoLuong">Số Lượng</label>
+                                    <input type="text" name="SoLuong" class="form-control mb-2">
+                                </div>
+                                <div class="form-group col-md-4">
+                                    <label for="TuoiNCC">Tuổi Thọ NCC</label>
+                                    <input type="text" name="TuoiNCC" class="form-control mb-2">
+                                </div>
+                                <div class="form-group col-md-4">
+                                    <label for="TuoiTT">Tuổi Thọ Thực Tế</label>
+                                    <input type="text" name="TuoiTT" class="form-control mb-2">
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-md-4">
+                                    <label for="TuoiDT">Tuổi Thọ Đã Tới</label>
+                                    <input type="text" name="SoLuong" class="form-control mb-2">
+                                </div>
+                                <div class="form-group col-md-4">
+                                    <label for="TuoiCL">Tuổi Thọ Còn Lại</label>
+                                    <input type="text" name="TuoiCL" class="form-control mb-2">
+                                </div>
+                                <div class="form-group col-md-4">
+                                    <label for="Hinh">Hình Ảnh</label>
+                                    <input type="text" name="Hinh" class="form-control mb-2">
+                                </div>
+                            </div>
+                            <div class="text-block text-center my-3">
+                                <p class="text-danger">{{message}}</p>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-success" data-dismiss="modal">Add</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- edit -->
+            <div bsmodal #modaledit="bs-modal" class="modal fade" id="editThietBi" tabindex="-1" role="dialog"
+                 aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Chỉnh Sửa</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="form-row">
+                                <div class="form-group col-md-4">
+                                    <label for="chooseCumThietBi">Cụm Thiết Bị</label>
+                                    <select name="chooseCumThietBi" id="chooseCumThietBi" class="form-control">
+                                        <option>Cụm abc</option>
+                                    </select>
+                                </div>
+                                <div class="form-group col-md-4">
+                                    <label for="ThongSoKT">Thông Số Kỹ Thuật</label>
+                                    <input type="text" name="ThongSoKT" class="form-control mb-2">
+                                </div>
+                                <div class="form-group col-md-4">
+                                    <label for="Dvt">Đơn Vị Tính</label>
+                                    <input type="text" class="form-control mb-2" name="Dvt">
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-md-4">
+                                    <label for="SoLuong">Số Lượng</label>
+                                    <input type="text" name="SoLuong" class="form-control mb-2">
+                                </div>
+                                <div class="form-group col-md-4">
+                                    <label for="TuoiNCC">Tuổi Thọ NCC</label>
+                                    <input type="text" name="TuoiNCC" class="form-control mb-2">
+                                </div>
+                                <div class="form-group col-md-4">
+                                    <label for="TuoiTT">Tuổi Thọ Thực Tế</label>
+                                    <input type="text" name="TuoiTT" class="form-control mb-2">
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-md-4">
+                                    <label for="TuoiDT">Tuổi Thọ Đã Tới</label>
+                                    <input type="text" name="SoLuong" class="form-control mb-2">
+                                </div>
+                                <div class="form-group col-md-4">
+                                    <label for="TuoiCL">Tuổi Thọ Còn Lại</label>
+                                    <input type="text" name="TuoiCL" class="form-control mb-2">
+                                </div>
+                                <div class="form-group col-md-4">
+                                    <label for="Hinh">Hình Ảnh</label>
+                                    <input type="text" name="Hinh" class="form-control mb-2">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary" data-dismiss="modal">Update</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- delete -->
+            <div bsmodal #modaldelete="bs-modal" class="modal fade" id="deleteThietBi" tabindex="-1" role="dialog"
+                 aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Xóa</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="form-row">
+                                <div class="form-group col-md-4">
+                                    <label for="chooseCumThietBi">Cụm Thiết Bị</label>
+                                    <select name="chooseCumThietBi" id="chooseCumThietBi" class="form-control" disabled>
+                                        <option>Cụm abc</option>
+                                    </select>
+                                </div>
+                                <div class="form-group col-md-4">
+                                    <label for="ThongSoKT">Thông Số Kỹ Thuật</label>
+                                    <input type="text" name="ThongSoKT" class="form-control mb-2" readonly>
+                                </div>
+                                <div class="form-group col-md-4">
+                                    <label for="Dvt">Đơn Vị Tính</label>
+                                    <input type="text" class="form-control mb-2" name="Dvt" readonly>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-md-4">
+                                    <label for="SoLuong">Số Lượng</label>
+                                    <input type="text" name="SoLuong" class="form-control mb-2" readonly>
+                                </div>
+                                <div class="form-group col-md-4">
+                                    <label for="TuoiNCC">Tuổi Thọ NCC</label>
+                                    <input type="text" name="TuoiNCC" class="form-control mb-2" readonly>
+                                </div>
+                                <div class="form-group col-md-4">
+                                    <label for="TuoiTT">Tuổi Thọ Thực Tế</label>
+                                    <input type="text" name="TuoiTT" class="form-control mb-2" readonly>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-md-4">
+                                    <label for="TuoiDT">Tuổi Thọ Đã Tới</label>
+                                    <input type="text" name="SoLuong" class="form-control mb-2" readonly>
+                                </div>
+                                <div class="form-group col-md-4">
+                                    <label for="TuoiCL">Tuổi Thọ Còn Lại</label>
+                                    <input type="text" name="TuoiCL" class="form-control mb-2" readonly>
+                                </div>
+                                <div class="form-group col-md-4">
+                                    <label for="Hinh">Hình Ảnh</label>
+                                    <input type="text" name="Hinh" class="form-control mb-2" readonly>
+                                </div>
+                            </div>
+                            <p class="text-danger">Bạn có chắc chắn muốn xóa Thông Số Kỹ Thuật này không?</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                            <button type="button" class="btn btn-danger" data-dismiss="modal">Delete</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Details -->
+            <div bsmodal #modaldetail="bs-modal" class="modal fade" id="detailThietBi" tabindex="-1" role="dialog"
+                 aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Thông Số Kỹ Thuật Chi Tiết</h5>
+                            <button type="button" class="close" (click)="close()" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="form-row">
+                                <div class="form-group col-md-4">
+                                    <label for="chooseCumThietBi">Cụm Thiết Bị</label>
+                                    <select name="chooseCumThietBi" id="chooseCumThietBi" class="form-control" disabled>
+                                        <option>Cụm abc</option>
+                                    </select>
+                                </div>
+                                <div class="form-group col-md-4">
+                                    <label for="ThongSoKT">Thông Số Kỹ Thuật</label>
+                                    <input type="text" name="ThongSoKT" class="form-control mb-2" readonly>
+                                </div>
+                                <div class="form-group col-md-4">
+                                    <label for="Dvt">Đơn Vị Tính</label>
+                                    <input type="text" class="form-control mb-2" name="Dvt" readonly>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-md-4">
+                                    <label for="SoLuong">Số Lượng</label>
+                                    <input type="text" name="SoLuong" class="form-control mb-2" readonly>
+                                </div>
+                                <div class="form-group col-md-4">
+                                    <label for="TuoiNCC">Tuổi Thọ NCC</label>
+                                    <input type="text" name="TuoiNCC" class="form-control mb-2" readonly>
+                                </div>
+                                <div class="form-group col-md-4">
+                                    <label for="TuoiTT">Tuổi Thọ Thực Tế</label>
+                                    <input type="text" name="TuoiTT" class="form-control mb-2" readonly>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-md-4">
+                                    <label for="TuoiDT">Tuổi Thọ Đã Tới</label>
+                                    <input type="text" name="SoLuong" class="form-control mb-2" readonly>
+                                </div>
+                                <div class="form-group col-md-4">
+                                    <label for="TuoiCL">Tuổi Thọ Còn Lại</label>
+                                    <input type="text" name="TuoiCL" class="form-control mb-2" readonly>
+                                </div>
+                                <div class="form-group col-md-4">
+                                    <label for="Hinh">Hình Ảnh</label>
+                                    <input type="text" name="Hinh" class="form-control mb-2" readonly>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal"
+                                    (click)="close()">
+                                Close
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card-body table-responsive">
+            <table datatable class="table table-striped table-hover display">
+                <thead class="bg-color text-white">
+                    <tr>
+                        <th scope="col">STT</th>
+                        <th scope="col">Cụm Thiết Bị</th>
+                        <th scope="col">Thông Số Kỹ Thuật</th>
+                        <th scope="col">Đơn Vị Tính</th>
+                        <th scope="col">Số Lượng</th>
+                        <th scope="col">Tuổi Thọ Nhà Cung Cấp</th>
+                        <th scope="col">Tuổi Thọ Thực Tế</th>
+                        <th scope="col">Tuổi Thọ Đã Tới</th>
+                        <th scope="col">Tuổi Thọ Còn Lại</th>
+                        <th scope="col">Hình Ảnh</th>
+                        <th scope="col">Thao Tác</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>Cụm abc</td>
+                        <td>Động cơ ABB,220KW,1800rpm</td>
+                        <td>Cái</td>
+                        <td>1</td>
+                        <td>6</td>
+                        <td>5</td>
+                        <td>5</td>
+                        <td>1</td>
+                        <td>abc.png</td>
+                        <td>
+                            <a href="#" class="text-warning" data-toggle="modal" data-target="#editThietBi">Sửa</a>
+                            | <a href="#" class="text-danger" data-toggle="modal" data-target="#deleteThietBi">Xóa</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div>
+        <div class="ml-auto d-inline float-left">
+            <a href="#">Quay lại</a>
+        </div>
+        <div class="ml-auto d-inline float-right">
+            <nav aria-label="Page navigation example">
+                <ul class="pagination justify-content-center">
+                    <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</div>
+<!-- page-body-wrapper ends -->
+

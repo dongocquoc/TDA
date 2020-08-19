@@ -1,0 +1,99 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- plugins:css -->
+    <link rel="stylesheet" href="/Asset/Admin/vendors/iconfonts/mdi/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="/Asset/Admin/vendors/css/vendor.bundle.base.css">
+    <link rel="stylesheet" href="/Asset/Admin/vendors/css/vendor.bundle.addons.css">
+    <!-- inject:css -->
+    <link rel="stylesheet" href="/Asset/Admin/css/style.css">
+    <link rel="stylesheet" href="/Asset/Admin/Daterangepicker/daterangepicker.css">
+    <link rel="stylesheet" href="/Asset/Admin/DataTable/jquery.dataTables.min.css">
+
+    <title>Hello, world!</title>
+</head>
+
+<body>
+    <div class="container-scroller">
+        <div class="container-fluid page-body-wrapper full-page-wrapper auth-page">
+            <div class="content-wrapper d-flex align-items-center auth register-bg-1 theme-one">
+                <div class="row w-100">
+                    <div class="col-lg-4 mx-auto">
+                        <div class="auto-form-wrapper">
+                            <form action="#">
+                                <div class="form-group">
+                                    <label class="label">Tài Khoản</label>
+                                    <input type="text" class="form-control" placeholder="Email hoặc số điện thoại" name="Username">
+                                </div>
+                                <div class="form-group">
+                                    <label class="label">Mật Khẩu</label>
+                                    <input type="password" class="form-control" placeholder="********" name="Password">
+                                </div>
+                                <div class="form-group">
+                                    <button class="btn btn-primary submit-btn btn-block">Đăng Nhập</button>
+                                </div>
+                                <div class="form-group d-flex justify-content-between">
+                                    <div class="form-check form-check-flat mt-0">
+                                        <label class="form-check-label">
+                                            <input type="checkbox" class="form-check-input" checked> Ghi nhớ mật khẩu
+                                        </label>
+                                    </div>
+                                    <a href="#" class="text-small forgot-password text-black">Quên mật khẩu?</a>
+                                </div>
+                                <div class="form-group">
+                                    <button class="btn btn-block g-login">
+                                        <img class="mr-3" src="../../images/file-icons/icon-google.svg" alt="">Đăng nhập với Google
+                                    </button>
+                                </div>
+                                <div class="text-block text-center my-3">
+                                    <p class="text-danger">{{message}}</p>
+                                </div>
+                            </form>
+                        </div>
+                        <ul class="auth-footer">
+                            <li>
+                                <a href="#">Điều khoản</a>
+                            </li>
+                            <li>
+                                <a href="#">Giúp đỡ</a>
+                            </li>
+                            <li>
+                                <a href="#">Trạng thái</a>
+                            </li>
+                        </ul>
+                        <p class="footer-text text-center">copyright © 2020 TDA Company. All rights reserved.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Optional JavaScript -->
+            <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+            <script src="/Asset/Admin/vendors/js/vendor.bundle.base.js"></script>
+            <script src="/Asset/Admin/vendors/js/vendor.bundle.addons.js"></script>
+            <!-- endinject -->
+            <!-- Plugin js for this page-->
+            <!-- End plugin js for this page-->
+            <!-- inject:js -->
+            <script src="/Asset/Admin/js/off-canvas.js"></script>
+            <script src="/Asset/Admin/js/misc.js"></script>
+            <!-- endinject -->
+            <!-- Custom js for this page-->
+            <script src="/Asset/Admin/js/dashboard.js"></script>
+            <!-- End custom js for this page-->
+            <!-- script customer -->
+            <script type="text/javascript" src="/Asset/Admin/Daterangepicker/moment.min.js"></script>
+            <script type="text/javascript" src="/Asset/Admin/Daterangepicker/daterangepicker.min.js"></script>
+            <!-- <script type="text/javascript" src="/Asset/Admin/DataTable/jquery.dataTables.min.js"></script> -->
+</body>
+
+</html>
