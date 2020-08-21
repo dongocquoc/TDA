@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="f4a98ca5fb2948d49a832adff51ca337" Name="Diagram1">
+        <EntityTypeShape EntityType="TDAKTModel.CumThietBi" Width="1.5" PointX="7.5" PointY="5.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="TDAKTModel.Chuyen" Width="1.5" PointX="3" PointY="5.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="TDAKTModel.DonVi" Width="1.5" PointX="0.75" PointY="7.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="TDAKTModel.Hinh" Width="1.5" PointX="12" PointY="8.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="TDAKTModel.KeHoach" Width="1.5" PointX="9.75" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="TDAKTModel.LichSu" Width="1.5" PointX="9.75" PointY="4.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="TDAKTModel.NhanVien" Width="1.5" PointX="3" PointY="12" IsExpanded="true" />
+        <EntityTypeShape EntityType="TDAKTModel.sysdiagrams" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TDAKTModel.ThietBi" Width="1.5" PointX="5.25" PointY="5.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="TDAKTModel.ThongSoKT" Width="1.5" PointX="9.75" PointY="7.875" IsExpanded="true" />
+        <AssociationConnector Association="TDAKTModel.FK_CumThietBi" ManuallyRouted="false" />
+        <AssociationConnector Association="TDAKTModel.FK_KeHoach" ManuallyRouted="false" />
+        <AssociationConnector Association="TDAKTModel.FK_LichSu" ManuallyRouted="false" />
+        <AssociationConnector Association="TDAKTModel.FK_ThongSoKT" ManuallyRouted="false" />
+        <AssociationConnector Association="TDAKTModel.FK_Chuyen" ManuallyRouted="false" />
+        <AssociationConnector Association="TDAKTModel.FK_ThietBi" ManuallyRouted="false" />
+        <AssociationConnector Association="TDAKTModel.FK_NhanVien" ManuallyRouted="false" />
+        <AssociationConnector Association="TDAKTModel.FK_Hinh_ThongSoKT" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

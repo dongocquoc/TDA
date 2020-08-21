@@ -43,6 +43,8 @@
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -168,13 +170,55 @@
     <Compile Include="Areas\Admin\Controllers\LoginController.cs" />
     <Compile Include="Areas\Admin\Controllers\ThietBiController.cs" />
     <Compile Include="Areas\Admin\Controllers\ThongSoKyThuatController.cs" />
-    <Compile Include="Controllers\AccountController.cs" />
-    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\CongTyAdminController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\AccountViewModels.cs" />
-    <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\Chuyen.cs">
+      <DependentUpon>TDA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CumThietBi.cs">
+      <DependentUpon>TDA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DonVi.cs">
+      <DependentUpon>TDA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Hinh.cs">
+      <DependentUpon>TDA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\KeHoach.cs">
+      <DependentUpon>TDA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LichSu.cs">
+      <DependentUpon>TDA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\NhanVien.cs">
+      <DependentUpon>TDA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sysdiagrams.cs">
+      <DependentUpon>TDA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TDA.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TDA.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TDA.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TDA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TDA.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TDA.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ThietBi.cs">
+      <DependentUpon>TDA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ThongSoKT.cs">
+      <DependentUpon>TDA.tt</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -2009,6 +2053,16 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Models\TDA.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>TDA.edmx</DependentUpon>
+      <LastGenOutput>TDA.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\TDA.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>TDA.edmx</DependentUpon>
+      <LastGenOutput>TDA.cs</LastGenOutput>
+    </Content>
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Areas\Admin\Views\web.config" />
@@ -2148,10 +2202,18 @@
     <Content Include="Areas\Admin\Views\ThongSoKyThuat\Index.cshtml" />
     <Content Include="Areas\Admin\Views\LichSu\Index.cshtml" />
     <Content Include="Areas\Admin\Views\KeHoachBaoTri\Index.cshtml" />
-    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
-    <Content Include="Scripts\jquery-1.10.2.js" />
-    <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <EntityDeploy Include="Models\TDA.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>TDA.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\TDA.edmx.diagram">
+      <DependentUpon>TDA.edmx</DependentUpon>
+    </Content>
+    <None Include="Scripts\jquery-3.3.1.intellisense.js" />
+    <Content Include="Scripts\jquery-3.3.1.min.map" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery-3.3.1.js" />
+    <Content Include="Scripts\jquery-3.3.1.min.js" />
     <Content Include="Scripts\jquery.validate.js" />
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
@@ -2171,20 +2233,8 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\About.cshtml" />
-    <Content Include="Views\Home\Contact.cshtml" />
-    <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Scripts\jquery-1.10.2.min.map" />
-    <Content Include="Views\Account\_ChangePasswordPartial.cshtml" />
-    <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
-    <Content Include="Views\Account\_RemoveAccountPartial.cshtml" />
-    <Content Include="Views\Account\_SetPasswordPartial.cshtml" />
-    <Content Include="Views\Account\ExternalLoginConfirmation.cshtml" />
-    <Content Include="Views\Account\ExternalLoginFailure.cshtml" />
-    <Content Include="Views\Account\Login.cshtml" />
-    <Content Include="Views\Account\Manage.cshtml" />
-    <Content Include="Views\Account\Register.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\CongTyAdmin\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -2196,6 +2246,9 @@
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

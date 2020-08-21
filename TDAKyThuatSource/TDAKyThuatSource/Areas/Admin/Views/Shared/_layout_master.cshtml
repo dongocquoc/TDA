@@ -24,6 +24,9 @@
 </head>
 
 <body>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
     <div class="container-scroller w-100">
         <!-- partial:partials/_navbar.html -->
         <nav class="navbar default-layout col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
@@ -156,8 +159,8 @@
     </footer>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="/Asset/Admin/vendors/js/vendor.bundle.base.js"></script>
-    <script src="/Asset/Admin/vendors/js/vendor.bundle.addons.js"></script>
+    @*<script src="/Asset/Admin/vendors/js/vendor.bundle.base.js"></script>*@
+    @*<script src="/Asset/Admin/vendors/js/vendor.bundle.addons.js"></script>*@
     <!-- endinject -->
     <!-- Plugin js for this page-->
     <!-- End plugin js for this page-->
