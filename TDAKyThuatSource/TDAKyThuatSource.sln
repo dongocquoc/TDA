@@ -1,11 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.40629.0
+VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TDAKyThuatSource", "TDAKyThuatSource\TDAKyThuatSource.csproj", "{19EC0A4D-1B7D-404A-9DD1-6616EE02BF66}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Models", "Models\Models.csproj", "{10E33721-BAA3-43FA-99DA-3E5BD01D4197}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +15,6 @@ Global
 		{19EC0A4D-1B7D-404A-9DD1-6616EE02BF66}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{19EC0A4D-1B7D-404A-9DD1-6616EE02BF66}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{19EC0A4D-1B7D-404A-9DD1-6616EE02BF66}.Release|Any CPU.Build.0 = Release|Any CPU
-		{10E33721-BAA3-43FA-99DA-3E5BD01D4197}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{10E33721-BAA3-43FA-99DA-3E5BD01D4197}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{10E33721-BAA3-43FA-99DA-3E5BD01D4197}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{10E33721-BAA3-43FA-99DA-3E5BD01D4197}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
